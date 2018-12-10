@@ -1,3 +1,17 @@
+---
+    author: XiaoFeng
+    comments: true
+    date: 2018-02-28 17:42:32+00:00
+    layout: post
+    title: docker中获取当前系统时间为格林威治时间及解决
+    categories:
+    - Docker
+    tags:
+    - Docker
+    - 容器
+    - 格林威治时间
+---
+
 # docker中获取当前系统时间为格林威治时间及解决
 
 - 摘要：
