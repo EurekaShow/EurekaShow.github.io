@@ -1,0 +1,125 @@
+# docker删除镜像的操作（含删除容器）
+## 先看下理论逻辑
+先上删除命令为敬
+```bash
+#删除容器
+docker rm 容器ID
+#删除镜像
+docker rmi 镜像ID
+```
+需要注意的是，容器运行依赖已有的镜像文件，因此，如果要删除的镜像文件正在运行，需要先停止容器。
+
+```bash
+#停止镜像
+docker stop 容器名称（这个是执行docker run时指定的容器名称）
+```
+当然，想知道正在运行的容器ID，最简单的办法就是查询命令啦
+
+```bash
+#查询正在执行的容器
+docker ps
+#查询所有容器
+docker ps -a
+```
+
+等你删除了容器后，可以转战删除镜像文件了，那么，你还是需要先知道镜像文件的id，首先要做的就是查询镜像文件ID
+
+```bash
+#查询镜像文件的ID
+docker images |grep 镜像文件名关键字
+```
+
+然后，可以最终出手删除镜像文件了，到此逻辑就捋清楚了。
+
+## 我们根据捋清逻辑把实际操作贴一波出来看下：
+
+- 1.查看正在运行的容器
+```bash
+[root@localhost containers]# docker ps
+CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS              PORTS                    NAMES
+2f4020487ca5        docker.io/komu/tomcat8-java8   "/opt/tomcat/bin/cata"   11 hours ago        Up 34 seconds       0.0.0.0:8080->8080/tcp   my_tomcat
+```
+
+- 2.停止容器
+
+```bash
+[root@localhost containers]# docker stop my_tomcat
+my_tomcat
+
+#接着用查询命令看不到了
+[root@localhost containers]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+#查询所有的容器看看，依然能看到刚才停止的容器
+[root@localhost containers]# docker ps -a
+CONTAINER ID        IMAGE                          COMMAND                  CREATED             STATUS                       PORTS               NAMES
+2f4020487ca5        docker.io/komu/tomcat8-java8   "/opt/tomcat/bin/cata"   12 hours ago        Exited (143) 2 minutes ago                       my_tomcat
+
+```
+
+- 3.删除容器
+```bash
+[root@localhost containers]# docker rm 2f4020487ca5
+2f4020487ca5
+
+#删除后，我们再来查询下看看，容器已经没有了。
+[root@localhost containers]# docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+#用默认的查询看看，依然是空的
+[root@localhost containers]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+- 4.删除镜像
+```bash
+#查询镜像
+[root@localhost containers]# docker images |grep tomcat
+docker.io/komu/tomcat8-java8   latest              8647274c14e3        2 years ago         874.7 MB
+
+#删除镜像
+[root@localhost containers]# docker rmi 8647274c14e3
+Untagged: docker.io/komu/tomcat8-java8:latest
+Untagged: docker.io/komu/tomcat8-java8@sha256:298d84062b2947fb76c8e0a0ae35a22b1e1058b4ec8d1b40d29d3fa37dc41bce
+Deleted: sha256:8647274c14e3461e7a3d99781536523e58e5fcc0a91fc1083b6bc7ffa8d3f972
+Deleted: sha256:6876998dd855c1d674246c5d1d290b13556a93de58eb6c9093f68fa229a0d763
+Deleted: sha256:5f082e804f301711943456083bf9d2a4358355f29fc29669f0e2feb837a00af0
+Deleted: sha256:31015d3a83fc87318ef36897bb88fb600bb0fcfa59d2bf31b09da11a2ce7fdc6
+Deleted: sha256:027a3c2efd2f44fb1860b59b4d76410cf23c1ececec08bd44c664b4f2f59f7c4
+Deleted: sha256:0d924f679f1baf02a4e22af3df161fb0b30bce27f866cc31325855eaf974c226
+Deleted: sha256:ad618b09f199b39da56d0f694172265bcfdd7e1ad48c90690eb9348049119a20
+Deleted: sha256:a1c2e75dcd81d4fe09255ba2de8a06751b407402008db343e72b86e00d4178c2
+Deleted: sha256:570f53454102840fb270bc8aff97cdf2e3ecc564a7ecc729e13d3de5d50b818b
+Deleted: sha256:6f270375b760905e76ee68f41c97f1b84723f615387b8b7b73809bd6a3adfa5f
+Deleted: sha256:d73c55535e8d5a9deb0570dd514f4dcfd1b1263b7c1aa5b8bf7851b0e85533dc
+Deleted: sha256:05b3edb706d037f7e33eab3dd75af5f37ebb88c3cc592f78efe8be084808bf50
+Deleted: sha256:c3126d350d5e7e8e741a0710dd61ccb826ab9072dd8f1bf948487af6d75b34e1
+Deleted: sha256:e0235d35cae3fe38c2f5a297a2cea661f7106765c2799fa8df84647deadae2ac
+Deleted: sha256:5bc606e564158ebf21b7da46caf05bd1ecda12bed31a53d9ff5f22b6c8d3b449
+Deleted: sha256:d5f6b32bb9f4931e5da87fabe2f65fe4fdc41f2cb8dd6578a2d02eeb3d3ef31e
+Deleted: sha256:8cedec329f5e54ad3f3bd0f3914387bc92a298a1b7c472f78f994208538dcf9e
+Deleted: sha256:113c27eda6783bfdcceff52936f610157b324eb4a907ade4a3fd536a7c8c7807
+Deleted: sha256:b83d425e3b175f4b9620c5092104e03cfeeaac0490a7ac3de723625e1204b879
+Deleted: sha256:ffa8afd6f4cb2f190e38c8c13540c4107dfbee71d270cf71582577c5bd3d7c22
+Deleted: sha256:31355d297a0a2ebe8048c4fe1963b9d120d0732b27a500e4b043c6f9fb7b1057
+Deleted: sha256:3109019b1aff324340534439f06e10fb04dbf48be60f18e94edf67445f06c794
+Deleted: sha256:ed42788187c040516320d5aef8fe77102ca848c5e3033f1ce2085a3832bf9ed9
+Deleted: sha256:af3d959eec156ef4fa4f74aea97e668fab3e9b88ebc0d23eccca34cb2250956b
+Deleted: sha256:75c50538c40ea10c26e7da2cbafe121cc6bab839a6ceffa22f99b5ec53ebee1d
+Deleted: sha256:3a850747fd39f4b6506449f302737c2ca8c8da3a47bed929d1d94509f9c7e103
+Deleted: sha256:ba3b4d3bbad753b2d4fe7f86aecf7f5717fe423c6d728eb6065c2eb990e7a870
+Deleted: sha256:0914cdbfc589842d144750d887292e51a2631601f570792db1859c9bbc1d345f
+Deleted: sha256:fe13e324c941dfdf7e40d20d2eb6bdd27d4d8e6ab69042be63844215a4926d92
+Deleted: sha256:947a3e7125fffa10ed14c49c9dccdcfd64aef816c4affa8d5d2b57ae7a2e8b6d
+Deleted: sha256:5fdb9f26c74d68049527b951ad0cd2a50893d41f5fbf2f2042ec6c592445c2f1
+Deleted: sha256:37b9c1ff87ee1d64a110df0a092c262219382c009d86ae4cc84433f6cb29e7cb
+Deleted: sha256:8698b31c92d5cf4ee37154fc560516040f372bd45707c3161be479443970d8a2
+
+#然后，我们用各种查询看看，都不存在了。
+[root@localhost containers]# docker images |grep tomcat
+[root@localhost containers]# docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+```
+
+
+
