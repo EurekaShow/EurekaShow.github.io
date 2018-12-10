@@ -1,4 +1,16 @@
-## docker搭建mysql 
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建mysql
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - mysql
+---
+
+# docker搭建mysql 
 
 ```bash
 ## windows

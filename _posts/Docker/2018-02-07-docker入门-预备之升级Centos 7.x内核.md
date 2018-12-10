@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门-预备之升级Centos 7.x内核
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - 容器
+    - Centos7
+---
+
 # docker入门-预备之升级Centos 7.x内核
 最近在学习 Docker,想在服务器上实践一下.Docker 需要安装在 CentOS 7 64 位的平台，并且内核版本不低于 3.10。 CentOS 7 满足最低内核的要求，但由于 CentOS 7 内核版本比较低，部分功能（如 overlay2 存储层驱动）无法使用，并且部分功能可能不太稳定.需要升级到最新的 CentOS 版本,并且内核也更新到最新的稳定版本.
 ### 检查当前 CentOS 系统版本

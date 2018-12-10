@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(十)docker集中化web界面管理平台-Portainer
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Portainer
+    - 管理工具
+---
+
 # docker入门(十)docker集中化web界面管理平台-Portainer
 
 shipyard的gitbug上贴着一张大大的png图，作者说，维护的活太苦逼了，希望找人分担阿，找人分担了阿。。。

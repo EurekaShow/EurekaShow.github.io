@@ -1,3 +1,15 @@
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docer配置Jenkins
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Jenkins
+---
+
 # docer配置Jenkins
 
 ### 下载JDK & Maven

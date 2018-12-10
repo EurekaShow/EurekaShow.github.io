@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(十一)docker修改容器启动方式
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - 容器
+    - 启动方式
+---
+
 # docker入门(十一)docker修改容器启动方式
 
 当你的容器运行一段时间后,需要修改容器启动方式以便更好的适用新的需求,基于各种理由,你不想重新生成新的容器,那么来看看怎么修改容器启动方式吧.

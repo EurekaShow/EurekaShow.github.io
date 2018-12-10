@@ -1,3 +1,15 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: MacOS Android开发环境配置
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - MacOS
+    - Android
+---
+
 # MacOS Android开发环境配置
 ## 安装并配置Java Home。
 Java的环境配置比较简单，直接安装或者解压，配置对应的Java Home即可。这里着重描述下Android SDK安装配置及Gradle配置。

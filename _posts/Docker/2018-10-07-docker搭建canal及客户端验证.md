@@ -1,4 +1,16 @@
-## docker搭建canal及客户端验证
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建canal及客户端验证
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - canal
+---
+
+# docker搭建canal及客户端验证
 
 - 1.首先，我们要搭建mysql
 

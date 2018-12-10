@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(七)CentOS7下使用docker-compose部署容器
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - 部署容器
+    - docker-compose
+---
+
 # docker入门(七)CentOS7下使用docker-compose部署容器
 知道了怎么用界面管理容器和镜像后，是不是觉得每次都docker run命令，在生产环境变化复杂和难以管理？毕竟生产环境不像测试环境，随便拉一个就Ok，那可是批量的环境阿，应用，缓存，数据库，应用集群，缓存集群，数据库集群，是不是瞬间头大了？还容易一个不小心就容易弄混，那么我们来看看，怎么高效管理docker run在生产中部署。docker 给出的方案是docker-compose，通过编辑yml文件达到统一管理容器的目的。我们先来看个示例，然后再来从安装一步步搭建一个wordpress。
 ```yml

@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(四)docker run挂载本地路径
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - 容器
+    - 挂载本地路径
+---
+
 # docker入门(四)docker run挂载本地路径
 
 ### - 1.先看上次我们最后run的脚本

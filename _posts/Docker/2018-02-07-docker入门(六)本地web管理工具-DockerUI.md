@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(六)本地web管理工具-DockerUI
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - DockerUI
+    - 管理工具
+---
+
 # docker入门(六)本地web管理工具-DockerUI
 
 Docker提供一个平台来把应用程序当作容器来打包、分发、共享和运行，它已经通过节省工作时间来拯救了成千上万的系统管理员和开发人员。Docker不用关注主机上运行的操作系统是什么，它没有开发语言、框架或打包系统的限制，并且可以在任何时间、任何地点运行，从小型计算机到高端服务器都可以。

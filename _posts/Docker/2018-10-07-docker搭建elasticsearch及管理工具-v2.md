@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建elasticsearch及管理工具
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - elasticsearch
+    - elasticsearch-head
+---
+
 # docker搭建elasticsearch及管理工具
 
 - 搭建

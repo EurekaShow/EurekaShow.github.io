@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: centos6安装docker
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - 容器
+    - Centos6
+---
+
 # centos6安装docker
 
 - 安装
