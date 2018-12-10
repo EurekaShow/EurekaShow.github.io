@@ -1,3 +1,15 @@
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建常用Gitlab
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Gitlab
+---
+ 
  # docker搭建常用Gitlab
  
 ```bash

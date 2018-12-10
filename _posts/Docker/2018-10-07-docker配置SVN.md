@@ -1,4 +1,16 @@
-# docker 配置SVN
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker配置SVN
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - SVN
+---
+
+# docker配置SVN
 
 ### 创建容器
 ```bash

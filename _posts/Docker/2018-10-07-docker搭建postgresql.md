@@ -1,4 +1,17 @@
-## docker搭建postgresql
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建postgresql
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - postgresql
+    - postgis
+---
+
+# docker搭建postgresql
 
 > postgresql
 ```bash

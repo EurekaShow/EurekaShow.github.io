@@ -1,3 +1,15 @@
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker配置Jira
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Jira
+---
+
 # docker配置Jira
 
 ### pull镜像文件，创建容器启动

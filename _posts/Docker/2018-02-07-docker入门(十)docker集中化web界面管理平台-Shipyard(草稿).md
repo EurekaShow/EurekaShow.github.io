@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(十)docker集中化web界面管理平台-Shipyard(草稿)
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Shipyard
+    - 管理工具
+---
+
 # docker入门(十)docker集中化web界面管理平台-Shipyard(草稿)
 还记得前面讲过的DockerUI么？虽然好用，可惜是单机版，对于多服务器部署的docker来说，那就是鸡肋阿。有句话怎么讲的？别不把鸡肋当鸡肉，那么，今天我们要给自己加一个大鸡腿，一起来看看shipyard。
 官方给出来的安装部署方式：

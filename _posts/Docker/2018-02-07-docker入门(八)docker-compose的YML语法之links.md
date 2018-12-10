@@ -1,3 +1,17 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker入门(八)docker-compose的YML语法之links
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - docker-compose
+    - YML
+    - links
+---
+
 # docker入门(八)docker-compose的YML语法之links
 之所以想单独说说links，问题在于它和docker run中的link很像，但是使用上又有些区别是需要注意的，首先来看看docker run中的link怎么使用
 

@@ -1,3 +1,16 @@
+---
+author: XiaoFeng
+date: 2018-02-07
+layout: post
+title: docker基于Nginx配置TCP负载均衡
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - Nginx
+    - TCP
+---
+
 # docker基于Nginx配置TCP负载均衡
 
 ## 给出Nginx的dockerfile

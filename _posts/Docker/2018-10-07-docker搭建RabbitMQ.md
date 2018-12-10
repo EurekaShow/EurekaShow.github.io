@@ -1,3 +1,15 @@
+---
+author: XiaoFeng
+date: 2018-10-07
+layout: post
+title: docker搭建RabbitMQ
+header-img: img/tag-bg-o.jpg
+catalog: true
+tags:
+    - Docker
+    - RabbitMQ
+---
+
 # docker搭建RabbitMQ
 
 - 版本:rabbitmq:3-management
